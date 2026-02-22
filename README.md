@@ -13,11 +13,11 @@
                     |
                  Outbound
 
-This project provisions a production-style AWS networking architecture using Terraform.
+# A production-style AWS networking architecture using Terraform.
 
 It implements secure public and private subnet isolation with controlled outbound internet access using a NAT Gateway, following cloud security best practices.
 
-The architecture ensures:
+## The architecture ensures:
 
 Private workloads are not directly exposed to the internet
 
@@ -39,7 +39,7 @@ Outbound traffic is allowed
 
 Inbound traffic remains blocked
 
-Infrastructure Components
+## Infrastructure Components
 
 Custom VPC (10.0.0.0/16)
 
@@ -57,8 +57,7 @@ Security Groups
 
 Remote Backend (S3 + DynamoDB for state locking)
 
-
-🔐 Security Considerations
+## Security Considerations
 
 Public subnet hosts only internet-facing components
 
@@ -73,4 +72,6 @@ Bastion access pattern used for controlled SSH
 Terraform state stored remotely to avoid drift and conflicts
 
 No credentials or secrets committed to repository
+
+
 
